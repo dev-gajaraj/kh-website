@@ -1,0 +1,112 @@
+.navbar {
+    background-color: var(--color-bg-main);
+    border-bottom: 1px solid #E5E7EB;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+.logoIcon {
+    color: var(--color-secondary);
+}
+
+.desktopMenu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.link {
+    font-weight: 500;
+    color: var(--color-text-muted);
+    transition: color 0.2s;
+    position: relative;
+}
+
+.link:hover {
+    color: var(--color-primary);
+}
+
+.active {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* Optional: Add a small dot or underline for active state */
+.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-secondary);
+    border-radius: 2px;
+}
+
+.mobileToggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+.mobileMenu {
+    display: none;
+}
+
+.mobileActive {
+    background-color: #F3F4F6;
+    color: var(--color-primary);
+    border-left: 4px solid var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+    .desktopMenu {
+        display: none;
+    }
+
+    .mobileToggle {
+        display: block;
+    }
+
+    .mobileMenu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--color-bg-main);
+        padding: 1rem;
+        border-bottom: 1px solid #E5E7EB;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobileLink {
+        padding: 1rem;
+        border-bottom: 1px solid #F3F4F6;
+        color: var(--color-primary);
+        font-weight: 600;
+    }
+}

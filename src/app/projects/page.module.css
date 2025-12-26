@@ -1,0 +1,114 @@
+.filterBar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filterButton {
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.filterButton:hover,
+.activeFilter {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.projectCard {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    border: 1px solid #E5E7EB;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.imageArea {
+    height: 250px;
+    background-color: #E5E7EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9CA3AF;
+    font-weight: 500;
+    position: relative;
+}
+
+.cardContent {
+    padding: 1.5rem;
+}
+
+.categoryTag {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-secondary);
+    background: var(--color-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.projectTitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.projectLocation {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .projectGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.projectMeta {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.metaRow {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.metaLabel {
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.metaValue {
+    color: var(--color-primary);
+    font-weight: 600;
+}

@@ -1,0 +1,78 @@
+/* Reset & Base */
+:root {
+  /* Colors - Industrial Elegance */
+  --color-primary: #0A192F;
+  /* Deep Navy - Trust & Stability */
+  --color-secondary: #FFD700;
+  /* Construction Gold - Accent */
+  --color-accent: #E63946;
+  /* Alert/Safety - Highlight */
+
+  --color-text-main: #1F2937;
+  --color-text-muted: #4B5563;
+  --color-text-light: #F3F4F6;
+
+  --color-bg-main: #FFFFFF;
+  --color-bg-alt: #F9FAFB;
+  --color-bg-dark: #111827;
+
+  /* Typography */
+  --font-main: var(--font-manrope), system-ui, sans-serif;
+
+  /* Spacing */
+  --spacing-container: 1200px;
+  --spacing-padding: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text-main);
+  background: var(--color-bg-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--spacing-container);
+  margin: 0 auto;
+  padding: 0 var(--spacing-padding);
+}
+
+.section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --spacing-padding: 1.25rem;
+  }
+
+  .section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
