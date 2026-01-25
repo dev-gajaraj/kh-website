@@ -26,7 +26,8 @@
 }
 
 .logoIcon {
-    color: var(--color-secondary);
+    /* No specific styles needed for image yet, keeping class for potential future use or consistency */
+    display: block;
 }
 
 .desktopMenu {

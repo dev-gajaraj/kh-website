@@ -66,6 +66,8 @@
     margin-bottom: 0.25rem;
     transform: translateY(10px);
     transition: transform 0.3s;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .projectCategory {

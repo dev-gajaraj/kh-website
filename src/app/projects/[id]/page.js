@@ -28,19 +28,24 @@ export default function ProjectDetails({ params }) {
     const project = projects.find((p) => p.id === params.id);
 
     if (!project) {
-        notFound();
+        return notFound();
     }
+
+    // Safety check for images
+    const mainImage = project.images && project.images.length > 0 ? project.images[0] : null;
 
     return (
         <>
             <div className={styles.hero}>
-                <Image
-                    src={project.images[0]}
-                    alt={project.title}
-                    fill
-                    priority
-                    className={styles.backgroundImage}
-                />
+                {mainImage && (
+                    <Image
+                        src={mainImage}
+                        alt={project.title}
+                        fill
+                        priority
+                        className={styles.backgroundImage}
+                    />
+                )}
                 <div className={styles.heroOverlay} />
 
                 <div className={`container ${styles.heroContent}`}>
@@ -64,16 +69,37 @@ export default function ProjectDetails({ params }) {
                     <h2>Project Overview</h2>
                     <p>{project.description}</p>
 
-                    <h2>The Challenge</h2>
-                    <p>{project.challenge}</p>
 
-                    <h2>Our Solution</h2>
-                    <p>{project.solution}</p>
+
+                    {project.images && project.images.length > 0 && (
+                        <>
+                            <h2 style={{ marginTop: '3rem', marginBottom: '1.5rem' }}>Project Gallery</h2>
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '2rem' }}>
+                                {project.images.map((img, index) => (
+                                    <div key={index} style={{ position: 'relative', height: '500px', borderRadius: '0.75rem', overflow: 'hidden', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)' }}>
+                                        <Image
+                                            src={img}
+                                            alt={`${project.title} - Image ${index + 1}`}
+                                            fill
+                                            style={{ objectFit: 'cover' }}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </>
+                    )}
                 </div>
 
                 {/* Sidebar stats */}
                 <aside className={styles.sidebar}>
                     <h3 className={styles.sidebarTitle}>Project Details</h3>
+
+                    <div className={styles.infoItem}>
+                        <span className={styles.label}>Location</span>
+                        <div className={styles.value} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                            <MapPin size={18} /> {project.location}
+                        </div>
+                    </div>
 
                     <div className={styles.infoItem}>
                         <span className={styles.label}>Client</span>

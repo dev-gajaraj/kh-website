@@ -45,20 +45,20 @@ export default function Home() {
             <section className={styles.statsSection}>
                 <div className={`container ${styles.statsGrid}`}>
                     <div>
-                        <span className={styles.statNumber}>25+</span>
+                        <span className={styles.statNumber}>15+</span>
                         <span className={styles.statLabel}>Years Experience</span>
                     </div>
                     <div>
-                        <span className={styles.statNumber}>150+</span>
+                        <span className={styles.statNumber}>50+</span>
                         <span className={styles.statLabel}>Projects Completed</span>
                     </div>
                     <div>
-                        <span className={styles.statNumber}>₹500Cr+</span>
+                        <span className={styles.statNumber}>₹1000 Cr+</span>
                         <span className={styles.statLabel}>Project Value Delivered</span>
                     </div>
                     <div>
                         <span className={styles.statNumber}>100%</span>
-                        <span className={styles.statLabel}>On-Time Completion</span>
+                        <span className={styles.statLabel}>Ontime Completion</span>
                     </div>
                 </div>
             </section>
@@ -66,10 +66,7 @@ export default function Home() {
             {/* Services Preview */}
             <section className="section container">
                 <div className={styles.sectionTitle}>
-                    <h2>Excellence in Construction</h2>
-                    <p>
-                        We specialize in large-scale government infrastructure projects, utilizing state-of-the-art technology and sustainable practices.
-                    </p>
+                    <h2>3 Pillars</h2>
                 </div>
 
                 <div className={styles.servicesGrid}>
@@ -77,21 +74,21 @@ export default function Home() {
                         <div className={styles.serviceIcon}><Building2 color="#fff" /></div>
                         <h3 className={styles.serviceTitle}>Civil Infrastructure</h3>
                         <p className={styles.serviceText}>
-                            Construction of government buildings, administrative complexes, and public utility structures designed for longevity.
+                            Governmental Buildings, Hostels, Apartments
                         </p>
                     </div>
                     <div className={styles.serviceCard}>
                         <div className={styles.serviceIcon}><TrendingUp color="#fff" /></div>
-                        <h3 className={styles.serviceTitle}>Roads & Highways</h3>
+                        <h3 className={styles.serviceTitle}>Roads & Bridges</h3>
                         <p className={styles.serviceText}>
                             State and National highway projects executed with precision engineering to connect communities across the region.
                         </p>
                     </div>
                     <div className={styles.serviceCard}>
                         <div className={styles.serviceIcon}><ShieldCheck color="#fff" /></div>
-                        <h3 className={styles.serviceTitle}>Irrigation & Dams</h3>
+                        <h3 className={styles.serviceTitle}>Colleges & Hospitals</h3>
                         <p className={styles.serviceText}>
-                            Critical water management infrastructure including canals and dams supporting Maharashtra's agricultural growth.
+                            Construction of educational and medical institutions.
                         </p>
                     </div>
                 </div>

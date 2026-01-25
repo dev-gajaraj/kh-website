@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, HardHat } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
 import Button from '../ui/Button';
 
@@ -17,7 +18,14 @@ export default function Navbar() {
         <nav className={styles.navbar}>
             <div className={`container ${styles.container}`}>
                 <Link href="/" className={styles.logo}>
-                    <HardHat size={32} className={styles.logoIcon} />
+                    <Image
+                        src="/kh-logo.png"
+                        alt="KH Construction Logo"
+                        width={176}
+                        height={93}
+                        className={styles.logoIcon}
+                        style={{ height: '32px', width: 'auto' }}
+                    />
                     <span className={styles.logoText}>KH Construction</span>
                 </Link>
 
