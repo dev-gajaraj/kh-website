@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, Linkedin } from 'lucide-react';
 import CopyrightYear from '../ui/CopyrightYear';
 import styles from './Footer.module.css';
 
@@ -22,6 +22,17 @@ export default function Footer() {
                     <p className={styles.description}>
                         Building the foundations of a stronger nation. Trusted partner for government infrastructure projects across India.
                     </p>
+                    <div className={styles.socials}>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                            <Image
+                                src="/linkedin.png"
+                                alt="LinkedIn"
+                                width={20}
+                                height={20}
+                                style={{ borderRadius: '4px' }}
+                            />
+                        </a>
+                    </div>
                 </div>
 
                 {/* Quick Links */}

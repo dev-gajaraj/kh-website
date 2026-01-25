@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ShieldCheck, HardHat, Building2, TrendingUp } from 'lucide-react';
 import Button from '../components/ui/Button';
 import styles from './page.module.css';
@@ -70,27 +71,40 @@ export default function Home() {
                 </div>
 
                 <div className={styles.servicesGrid}>
-                    <div className={styles.serviceCard}>
-                        <div className={styles.serviceIcon}><Building2 color="#fff" /></div>
-                        <h3 className={styles.serviceTitle}>Civil Infrastructure</h3>
-                        <p className={styles.serviceText}>
-                            Governmental Buildings, Hostels, Apartments
-                        </p>
-                    </div>
-                    <div className={styles.serviceCard}>
-                        <div className={styles.serviceIcon}><TrendingUp color="#fff" /></div>
-                        <h3 className={styles.serviceTitle}>Roads & Bridges</h3>
-                        <p className={styles.serviceText}>
-                            State and National highway projects executed with precision engineering to connect communities across the region.
-                        </p>
-                    </div>
-                    <div className={styles.serviceCard}>
-                        <div className={styles.serviceIcon}><ShieldCheck color="#fff" /></div>
-                        <h3 className={styles.serviceTitle}>Colleges & Hospitals</h3>
-                        <p className={styles.serviceText}>
-                            Construction of educational and medical institutions.
-                        </p>
-                    </div>
+                    {[
+                        {
+                            title: 'Civil Infrastructure',
+                            description: 'Governmental Buildings, Hostels, Apartments',
+                            icon: <Building2 color="#fff" />,
+                            bgImg: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop'
+                        },
+                        {
+                            title: 'Roads & Bridges',
+                            description: 'State and National highway projects executed with precision engineering to connect communities across the region.',
+                            icon: <TrendingUp color="#fff" />,
+                            bgImg: '/bridge-construction.jpg'
+                        },
+                        {
+                            title: 'Colleges & Hospitals',
+                            description: 'Construction of educational and medical institutions.',
+                            icon: <ShieldCheck color="#fff" />,
+                            bgImg: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=800&auto=format&fit=crop'
+                        }
+                    ].map((service, index) => (
+                        <div key={index} className={styles.serviceCard}>
+                            <div className={styles.serviceCardBackground}>
+                                <Image
+                                    src={service.bgImg}
+                                    alt="Background"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                />
+                            </div>
+                            <div className={styles.serviceIcon}>{service.icon}</div>
+                            <h3 className={styles.serviceTitle}>{service.title}</h3>
+                            <p className={styles.serviceText}>{service.description}</p>
+                        </div>
+                    ))}
                 </div>
             </section>
 

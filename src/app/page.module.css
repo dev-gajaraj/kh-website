@@ -125,6 +125,20 @@
     border-radius: 8px;
     border: 1px solid #E5E7EB;
     transition: transform 0.2s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.serviceCardBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.15;
+    pointer-events: none;
 }
 
 .serviceCard:hover {

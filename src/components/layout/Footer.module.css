@@ -25,6 +25,9 @@
     margin-bottom: 1rem;
     object-fit: contain;
     object-position: left;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 4px;
 }
 
 .description {
@@ -36,15 +39,29 @@
 .socials {
     display: flex;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .socials a {
-    color: var(--color-primary);
-    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: transform 0.2s;
 }
 
 .socials a:hover {
-    color: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+.socials img {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.socials a:hover img {
+    opacity: 1;
 }
 
 .heading {
