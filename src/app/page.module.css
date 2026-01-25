@@ -65,15 +65,13 @@
 }
 
 .sectionTitle {
-    text-align: center;
-    margin-bottom: 3rem;
+    text-align: left;
+    margin-bottom: 2rem;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .sectionTitle h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: var(--color-primary);
 }
@@ -88,6 +86,7 @@
     background-color: var(--color-secondary);
     padding: 3rem 0;
     color: var(--color-primary);
+    /* Footer 'Lavender' (Dark Blue) */
 }
 
 .statsGrid {
@@ -117,7 +116,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .serviceCard {

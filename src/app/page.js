@@ -95,15 +95,7 @@ export default function Home() {
             </section>
 
             {/* Call to Action */}
-            <section className={`section ${styles.ctaSection}`}>
-                <div className="container">
-                    <h2 className={styles.ctaTitle}>Ready to Build the Future?</h2>
-                    <p style={{ marginBottom: '2rem', opacity: 0.9 }}>
-                        Partner with a construction company that understands regulatory compliance and quality standards.
-                    </p>
-                    <Button href="/contact" variant="secondary">Get in Touch</Button>
-                </div>
-            </section>
+
         </>
     );
 }

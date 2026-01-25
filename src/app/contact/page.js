@@ -8,7 +8,7 @@ export const metadata = {
 export default function Contact() {
     return (
         <div className="section container">
-            <h1 style={{ marginBottom: '1rem', fontSize: '2.5rem' }}>Contact Us</h1>
+            <h1 style={{ marginBottom: '1rem', fontSize: '2.5rem' }}>Our Offices</h1>
             <p style={{ maxWidth: '600px', marginBottom: '3rem', color: 'var(--color-text-muted)' }}>
                 Interested in partnering with us? Reach out to our team regarding new tenders, joint ventures, or general inquiries.
             </p>
@@ -23,12 +23,33 @@ export default function Contact() {
                     </div>
 
                     <div className={styles.infoItem}>
-                        <h3>Regional Office</h3>
-                        <p>#88, Tech Park Road, Whitefield<br />Bangalore, Karnataka 560066</p>
+                        <h3>Regional Offices</h3>
+
+                        <div style={{ marginBottom: '1.25rem' }}>
+                            <h4 style={{ fontSize: '1rem', marginBottom: '0.25rem' }}>Bangalore</h4>
+                            <p>#88, Tech Park Road, Whitefield<br />Bangalore, Karnataka 560066</p>
+                        </div>
+
+                        <div>
+                            <h4 style={{ fontSize: '1rem', marginBottom: '0.25rem' }}>Chennai</h4>
+                            <p>#42, Anna Salai, Guindy<br />Chennai, Tamil Nadu 600032</p>
+                        </div>
                     </div>
 
-                    <p>Phone: <a href="tel:+912012345678" className={styles.contactLink}>+91 20 1234 5678</a></p>
-                    <p>Email: <a href="mailto:tenders@khprojects.com" className={styles.contactLink}>tenders@khprojects.com</a></p>
+                    <div style={{ marginTop: '2rem' }}>
+                        <p style={{ marginBottom: '0.5rem' }}>
+                            <strong>Phone:</strong>{' '}
+                            <a href="tel:+912012345678" className={styles.contactLink}>+91 20 1234 5678</a>
+                            <span style={{ margin: '0 0.5rem' }}>|</span>
+                            <a href="https://wa.me/912012345678" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+                                Chat on WhatsApp
+                            </a>
+                        </p>
+                        <p>
+                            <strong>Email:</strong>{' '}
+                            <a href="mailto:tenders@khprojects.com" className={styles.contactLink}>tenders@khprojects.com</a>
+                        </p>
+                    </div>
                 </div>
 
                 {/* Map Card */}

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import CopyrightYear from '../ui/CopyrightYear';
 import styles from './Footer.module.css';
@@ -10,9 +11,16 @@ export default function Footer() {
 
                 {/* Company Info */}
                 <div className={styles.section}>
+                    <Image
+                        src="/kh-logo.png"
+                        alt="KH Construction Logo"
+                        width={200}
+                        height={60}
+                        className={styles.logo}
+                    />
                     <h3 className={styles.logoText}>KH Construction</h3>
                     <p className={styles.description}>
-                        Building the foundations of a stronger nation. Trusted partner for government infrastructure projects across Maharashtra.
+                        Building the foundations of a stronger nation. Trusted partner for government infrastructure projects across India.
                     </p>
                 </div>
 

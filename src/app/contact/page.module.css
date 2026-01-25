@@ -1,13 +1,13 @@
 .contactGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 2rem;
     margin-top: 2rem;
 }
 
 .infoCard {
-    background: var(--color-primary);
-    color: #fff;
+    background: var(--color-bg-alt);
+    color: var(--color-text-main);
     padding: 2.5rem;
     border-radius: 8px;
 }
@@ -17,13 +17,24 @@
 }
 
 .infoItem h3 {
-    color: var(--color-secondary);
+    color: var(--color-primary);
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
 }
 
 .infoItem p {
     opacity: 0.9;
+}
+
+.contactLink {
+    color: var(--color-primary);
+    text-decoration: underline;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.contactLink:hover {
+    opacity: 0.8;
 }
 
 .mapCard {

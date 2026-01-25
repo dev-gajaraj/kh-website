@@ -1,7 +1,7 @@
 .galleryHeader {
-    text-align: center;
+    text-align: left;
     padding-bottom: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     border-bottom: 1px solid #E5E7EB;
 }
 
@@ -15,14 +15,14 @@
     color: var(--color-text-muted);
     font-size: 1.125rem;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .galleryGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 1.5rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 
 .imageCard {
